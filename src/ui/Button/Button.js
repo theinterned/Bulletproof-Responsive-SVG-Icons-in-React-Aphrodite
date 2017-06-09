@@ -2,19 +2,22 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
 
-const buttonStyles = {
-  border: '1px solid #eee',
-  borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  cursor: 'pointer',
-  fontSize: 15,
-  padding: '3px 10px',
-  margin: 10,
-};
+const styles = StyleSheet.create({
+  button: {
+    border: '1px solid #eee',
+    borderRadius: 3,
+    backgroundColor: '#FFFFFF',
+    cursor: 'pointer',
+    fontSize: 15,
+    padding: '3px 10px',
+    margin: 10,
+  }
+});
 
 const Button = ({ children, onClick }) =>
-  <button style={buttonStyles} onClick={onClick}>
+  <button className={css(styles.button)} onClick={onClick}>
     {children}
   </button>;
 
