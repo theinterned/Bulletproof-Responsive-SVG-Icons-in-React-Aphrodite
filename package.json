@@ -1,0 +1,9 @@
+{
+  "name": "Bulletproof-Responsive-SVG-Icons-in-React",
+  "version": "1.0.0",
+  "description": "Sample implementation of a responsive SVG icon in React.",
+  "main": "index.js",
+  "repository": "https://github.com/theinterned/Bulletproof-Responsive-SVG-Icons-in-React.git",
+  "author": "Ned Schwartz <ned@theinterned.net>",
+  "license": "MIT"
+}
