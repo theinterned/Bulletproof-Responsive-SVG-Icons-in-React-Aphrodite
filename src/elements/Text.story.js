@@ -10,7 +10,7 @@ storiesOf('Text', module)
       <Text size="md">16/20 &mdash; md</Text>
       <Text size="lg">20/25 &mdash; lg</Text>
       <Text size="xl">24/30 &mdash; xl</Text>
-      <Text size="xxl">32/40 &mdash; xxl</Text>
+      <Text size="xxl">28/35 &mdash; xxl</Text>
     </div>
   ))
   .add('Lorem Ipsum', () => (

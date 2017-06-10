@@ -10,8 +10,8 @@ const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 const baseFontSize = 16;
 const baseLineHeight = 20;
 
-const fontSize = (target = baseFontSize, base = baseFontSize) => target / base;
-const lineHeight = (target = baseLineHeight, fontSize = baseFontSize) => target / fontSize;
+const fontSize = (target = 1, base = baseFontSize) => target * base / base;
+const lineHeight = (target = 1, fontSize = baseFontSize, base = baseLineHeight) => target * base / fontSize;
 const em = measure => `${measure}em`;
 
 Text.propTypes = {
@@ -29,7 +29,7 @@ export const textStyles = {
 
 const textSizes = sizes.reduce((o, size, i) => {
   const fontScale = (i + 2) * .25;
-  o[size] = { fontSize: em(fontSize(baseFontSize * fontScale)) };
+  o[size] = { fontSize: em(fontSize(fontScale)) };
   return o;
 }, {});
 
