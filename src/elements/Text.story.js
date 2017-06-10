@@ -5,6 +5,16 @@ import Text from './Text';
 storiesOf('Text', module)
   .add('default', () => (
     <div>
+      <Text size="xs">8/10 &mdash; xs</Text>
+      <Text size="sm">12/15 &mdash; sm</Text>
+      <Text size="md">16/20 &mdash; md</Text>
+      <Text size="lg">20/25 &mdash; lg</Text>
+      <Text size="xl">24/30 &mdash; xl</Text>
+      <Text size="xxl">32/40 &mdash; xxl</Text>
+    </div>
+  ))
+  .add('Lorem Ipsum', () => (
+    <div>
       <Text><b>Fabulas adipisicing aut incididunt</b> <i>iis anim a doctrina non malis.</i> Ut laborum a
       cernantur, incididunt labore ne eiusmod adipisicing, ullamco velit in deserunt
       illustriora, nostrud anim ad occaecat efflorescere. O aliqua cillum summis
