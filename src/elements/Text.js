@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite';
 
-const Text = ({children, size = 'md'}) => <p className={css(styles.text, styles[size])}>{children}</p>;
+const Text = ({children, size = 'md', style}) => <p className={css(styles.text, styles[size])} style={style}>{children}</p>;
 
 export default Text;
 
@@ -16,7 +16,8 @@ const em = measure => `${measure}em`;
 
 Text.propTypes = {
   children: PropTypes.node,
-  size: PropTypes.oneOf(sizes)
+  size: PropTypes.oneOf(sizes),
+  style: PropTypes.object
 }
 
 export const textStyles = {

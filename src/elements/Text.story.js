@@ -26,4 +26,13 @@ storiesOf('Text', module)
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
        anim id est laborum.</Text>
     </div>
+  ))
+  .add('accepts style', () => (
+    <Text style={{
+      fontStyle: 'italic',
+      fontWeight: 'bold',
+      textTransform: 'uppercase',
+      padding: '1em',
+      outline: '.5em dotted red',
+    }}>I have an outline</Text>
   ));
