@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite';
 
+const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
+
 const Text = ({children, size = 'md'}) => <p className={css(styles.text, styles[size])}>{children}</p>;
 
 export default Text;
 
 Text.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  size: PropTypes.oneOf(sizes)
 }
 
 const baseFontSize = 16;
@@ -25,21 +28,13 @@ export const textStyles = {
   fontFamily: 'sans-serif',
 }
 
+const textSizes = sizes.reduce((o, size, i) => {
+  const fontScale = (i + 2) * .25;
+  o[size] = { fontSize: em(fontSize(baseFontSize * fontScale)) };
+  return o;
+}, {});
+
 const styles = StyleSheet.create({
   text: textStyles,
-  xs: {
-    fontSize: em(fontSize(baseFontSize * .5))
-  },
-  sm: {
-    fontSize: em(fontSize(baseFontSize * .75))
-  },
-  lg: {
-    fontSize: em(fontSize(baseFontSize * 1.25)),
-  },
-  xl: {
-    fontSize: em(fontSize(baseFontSize * 1.5))
-  },
-  xxl: {
-    fontSize: em(fontSize(baseFontSize * 2))
-  },
+  ...textSizes
 });
