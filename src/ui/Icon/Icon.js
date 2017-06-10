@@ -20,6 +20,8 @@ Icon.propTypes = {
   name: PropTypes.string,
 };
 
+const child = selector => `:not(child) ${selector}`;
+
 const styles = StyleSheet.create({
   icon:  {                       // aligns icon to text baseline
     display: 'inline-block',
@@ -32,5 +34,8 @@ const styles = StyleSheet.create({
     top: 0,
     height: textStyles.lineHeight,
     width: textStyles.lineHeight,
+    [child('*[fill]')]: {
+      fill: 'currentColor',
+    },
   }
 });

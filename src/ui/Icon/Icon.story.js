@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import Text from '../../elements/Text';
 import Icon from './Icon';
 
-
 storiesOf('Icon', module)
   .add('default', () => (
     <div>
@@ -14,6 +13,64 @@ storiesOf('Icon', module)
       <Text><Icon name="Skull" /> Skull Icon</Text>
       <Text><Icon name="Tear" /> Tear Icon</Text>
       <Text><Icon name="Tooth" /> Tooth Icon</Text>
+    </div>
+  ))
+  .add('inherits colour', () => (
+    <div>
+      <Text style={{color: 'red'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
+      <Text style={{color: 'orange'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
+      <Text style={{color: 'yellow'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
+      <Text style={{color: 'green'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
+      <Text style={{color: 'blue'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
+      <Text style={{color: 'purple'}}>
+        <Icon name="Baby" />
+        <Icon name="Balloon" />
+        <Icon name="Globe" />
+        <Icon name="Knife" />
+        <Icon name="Skull" />
+        <Icon name="Tear" />
+        <Icon name="Tooth" />
+      </Text>
     </div>
   ))
   .add('at different sizes', () => (
