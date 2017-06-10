@@ -2,6 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, css } from 'aphrodite';
+import { textStyles } from '../../elements/Text';
 import BabyIcon from './icons/Baby.icon.svg';
 
 const Icon = ({ name }) => <span className={css(styles.icon)}>
@@ -15,17 +16,16 @@ Icon.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  icon:  {
-    display: 'inline-flex',
-    alignSelf: 'center',
+  icon:  {                       // aligns icon to text baseline
+    display: 'inline-block',
     position: 'relative',
-    height: '1em',
-    width: '1.25em'
+    height: textStyles.fontSize, // text x-height
+    width: textStyles.lineHeight, // line-height == icon size
   },
-  svg: {
-    height: '1.25em',
-    width: '1.25em',
+  svg: {                        // aligns icon to text line-height
+    position: 'absolute',
     top: 0,
-    position: 'absolute'
+    height: textStyles.lineHeight,
+    width: textStyles.lineHeight,
   }
 });
