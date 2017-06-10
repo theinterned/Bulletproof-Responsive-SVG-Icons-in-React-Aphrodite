@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, css } from 'aphrodite';
 import { textStyles } from '../../elements/Text';
-import * as icons from './icons/';
+import * as icons from './icons';
 
 const Icon = ({ name }) => {
   const IconName = icons[name];
