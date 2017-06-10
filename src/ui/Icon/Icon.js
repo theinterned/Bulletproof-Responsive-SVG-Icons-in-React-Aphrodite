@@ -3,11 +3,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, css } from 'aphrodite';
 import { textStyles } from '../../elements/Text';
-import BabyIcon from './icons/Baby.icon.svg';
+import * as icons from './icons/';
 
-const Icon = ({ name }) => <span className={css(styles.icon)}>
-  <BabyIcon className={css(styles.svg)} />
-</span>;
+const Icon = ({ name }) => {
+  const IconName = icons[name];
+  return (
+    <span className={css(styles.icon)}>
+      <IconName className={css(styles.svg)} />
+    </span>
+  );
+}
 
 export default Icon;
 
