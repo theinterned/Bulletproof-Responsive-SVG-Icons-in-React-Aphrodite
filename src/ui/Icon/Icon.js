@@ -20,7 +20,7 @@ Icon.propTypes = {
   name: PropTypes.string,
 };
 
-const child = selector => `:not(child) ${selector}`;
+const child = selector => `:not(o) ${selector}`; // hack to allow nested child selector
 
 const styles = StyleSheet.create({
   icon:  {                       // aligns icon to text baseline
